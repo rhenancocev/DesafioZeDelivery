@@ -338,7 +338,7 @@ obs: Lista tudo que estiver no BANCO.
 * [Postman](https://www.postman.com/downloads/) [SUGESTÃO DE SOFTWARE PARA CHAMADA DAS API'S]
 ---------------------------------------------------------------------------
 #### Clonar este projeto
-	git clone https://github.com/rhenancocev/DesafioZeDelivery.git
+	git clone git@github.com:rhenancocev/DesafioZeDelivery.git
 ---------------------------------------------------------------------------
 #### Rode a aplicação
  - Dentro do diretorio local (MASTER), executar o comando "docker-compose up" no terminal e aguardar subir a aplicação (node/banco).
