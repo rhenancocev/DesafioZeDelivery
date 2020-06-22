@@ -3,10 +3,11 @@
 # Ferramentas e linguagens utilizadas no projeto
 
 * Visual Studio
+* Postman para chamadas REST
 * Mongo DB
 * NodeJS
-* Postman para chamadas REST
-* MLAB para instanciar o MongoDB em um cluster na AWS
+* Docker
+* Atlas para instanciar o MongoDB em um cluster na AWS
 
 
 # Rotas
@@ -331,13 +332,20 @@ obs: Lista tudo que estiver no BANCO.
 ## Instrução para instalar
 ### Windows, linux e MacOS
 #### Primeiro instalar o Visual Studio e o NodeJS
-* [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/)
-* [NodeJS](https://nodejs.org/en/download/)
+* [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/) [SUGESTÃO DE IDE]
+* [NodeJS](https://nodejs.org/en/download/) [SUGESTÃO CASO NÃO QUEIRA INICIAR A APLICAÇÃO PELO DOCKER]
+* [Docker](https://www.docker.com/products/docker-desktop) [SUGESTÃO CASO QUEIRA INICIAR A APLICAÇÃO PELO DOCKER]
+* [Postman](https://www.postman.com/downloads/) [SUGESTÃO DE SOFTWARE PARA CHAMADA DAS API'S]
 ---------------------------------------------------------------------------
 #### Clonar este projeto
 	git clone git@github.com:rhenancocev/ZeDeliveryDesafio.git
 ---------------------------------------------------------------------------
 #### Rode a aplicação
- - Dentro do diretorio local (dentro da master), executar o comando "node app.js" aguardar subir a aplicação node e o banco.
- Após essas duas mensagens no console: "API Rodando..." e "Banco de dados conectado..." a chamada das API's poderá ser feita via postman.
+ - Dentro do diretorio local (MASTER), executar o comando "docker-compose up" no terminal e aguardar subir a aplicação (node/banco).
+ 
+ - Aguardar receber as seguintes mensagens no console: "API Rodando..." e "Banco de dados conectado..." 
+ 
+ - Utilizar o POSTMAN ou qualquer outro programa para realizar as chamadas das API's.
+ 
+ - Para descer a aplicação, basta executar o comando "docker-compose down -v".
 ---------------------------------------------------------------------------
