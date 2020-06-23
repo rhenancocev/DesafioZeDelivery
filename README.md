@@ -234,7 +234,7 @@
 ```
 
 ## Exemplo - Busca parceiro (query params)
-#### rota http://localhost:8080/api/busca/buscaParceiro?lng=-47.2345&lat=-22.1857
+#### rota http://localhost:8080/api/busca/buscaParceiro/?lng=-47.2345&lat=-22.1857
 #### O Respose retornado será um array com todos os parceiros que estão na proximidade informada (lng e lat), Exemplo de retorno:
 ```json
 {
