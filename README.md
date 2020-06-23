@@ -17,7 +17,7 @@
 | /api/cadastro/criarParceiro                                | Cria um parceiro no banco de dados	         | POST             |Body JSON 		   |
 | /api/consulta/listaId/?id=PARAM                                  | Retorna um determinado parceiro de acordo com o ID informado				 | GET              |id = number		   |
 | /api/consulta/listaTodos 	                            | Lista todos os parceiros do BD			     | GET              |Não precisa	   |
-| /api/busca/buscaParceiro?lng=PARAM&lat=PARAM          | Retorna a lista de parceiros mais proximo referente a LNG e LAT informada.       | GET              |lng = floot e lat = floot		   |
+| /api/busca/buscaParceiro/?lng=PARAM&lat=PARAM          | Retorna a lista de parceiros mais proximo referente a LNG e LAT informada.       | GET              |lng = floot e lat = floot		   |
 |/api                                                | Retorna a documentação de uso das rotas | GET | Não Precisa |
 
 
