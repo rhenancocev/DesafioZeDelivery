@@ -331,10 +331,10 @@ obs: Lista tudo que estiver no BANCO.
 
 ## Instrução para instalar
 ### Windows, linux e MacOS
-#### Primeiro instalar o Visual Studio e o NodeJS
+#### Obrigatoriamente instalar o Docker:
+* [Docker](https://www.docker.com/products/docker-desktop)
 * [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/) [SUGESTÃO DE IDE]
 * [NodeJS](https://nodejs.org/en/download/) [SUGESTÃO CASO NÃO QUEIRA INICIAR A APLICAÇÃO PELO DOCKER]
-* [Docker](https://www.docker.com/products/docker-desktop) [SUGESTÃO CASO QUEIRA INICIAR A APLICAÇÃO PELO DOCKER]
 * [Postman](https://www.postman.com/downloads/) [SUGESTÃO DE SOFTWARE PARA CHAMADA DAS API'S]
 ---------------------------------------------------------------------------
 #### Clonar este projeto
