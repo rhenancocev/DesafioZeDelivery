@@ -321,9 +321,9 @@ obs: Lista tudo que estiver no BANCO.
     "help": "Rhenan Cocev",
     "resourceMethods": {
         "/cadastro/CriarParceiro": "Chame /cadastro/CriarParceiro para criar um parceiro",
-        "/consulta/listaId/:id": "Chame /consulta/listaId/:id para listar um determinado parceiro",
+        "/consulta/listaId/?id=PARAM": "Chame /consulta/listaId/?id=PARAM para listar um determinado parceiro",
         "/consulta/listaTodos": "Chame /consulta/listaTodos para listar todos os parceiros do banco",
-        "/busca/buscaParceiro?lng=PARAM&lat=PARAM": "Chame /busca/buscaParceiro?lng=PARAM&lat=PARAM passando os parametros, para buscar um parceiro nas proximidades, dada lng e lat"
+        "/busca/buscaParceiro/?lng=PARAM&lat=PARAM": "Chame /busca/buscaParceiro/?lng=PARAM&lat=PARAM passando os parametros, para buscar um parceiro nas proximidades, dada lng e lat"
     }
 }
 ```
