@@ -3,10 +3,11 @@
 # Ferramentas e linguagens utilizadas no projeto
 
 * Visual Studio
+* Postman para chamadas REST
 * Mongo DB
 * NodeJS
-* Postman para chamadas REST
-* MLAB para instanciar o MongoDB em um cluster na AWS
+* Docker
+* Atlas para instanciar o MongoDB em um cluster na AWS
 
 
 # Rotas
@@ -14,7 +15,7 @@
 | Rotas                                         | Descrição                                    | Metodos HTTP     | parametros e tipos  |
 |-----------------------------------------------|------------------------------------------------|------------------|------------------|
 | /api/cadastro/criarParceiro                                | Cria um parceiro no banco de dados	         | POST             |Body JSON 		   |
-| /api/consulta/listaId/?id=PARAM                                  | Retorna um determinado parceiro de acordo com o ID informado				 | GET              |id:int		   |
+| /api/consulta/listaId/?id=PARAM                                  | Retorna um determinado parceiro de acordo com o ID informado				 | GET              |id = number		   |
 | /api/consulta/listaTodos 	                            | Lista todos os parceiros do BD			     | GET              |Não precisa	   |
 | /api/busca/buscaParceiro?lng=PARAM&lat=PARAM          | Retorna a lista de parceiros mais proximo referente a LNG e LAT informada.       | GET              |lng = floot e lat = floot		   |
 |/api                                                | Retorna a documentação de uso das rotas | GET | Não Precisa |
@@ -233,7 +234,7 @@
 ```
 
 ## Exemplo - Busca parceiro (query params)
-#### rota http://localhost:8080/api/busca/buscaParceiro?lng=-47.2345&lat=-22.1857
+#### rota http://localhost:8080/api/busca/buscaParceiro/?lng=-47.2345&lat=-22.1857
 #### O Respose retornado será um array com todos os parceiros que estão na proximidade informada (lng e lat), Exemplo de retorno:
 ```json
 {
@@ -320,9 +321,9 @@ obs: Lista tudo que estiver no BANCO.
     "help": "Rhenan Cocev",
     "resourceMethods": {
         "/cadastro/CriarParceiro": "Chame /cadastro/CriarParceiro para criar um parceiro",
-        "/consulta/listaId/:id": "Chame /consulta/listaId/:id para listar um determinado parceiro",
+        "/consulta/listaId/?id=PARAM": "Chame /consulta/listaId/?id=PARAM para listar um determinado parceiro",
         "/consulta/listaTodos": "Chame /consulta/listaTodos para listar todos os parceiros do banco",
-        "/busca/buscaParceiro?lng=PARAM&lat=PARAM": "Chame /busca/buscaParceiro?lng=PARAM&lat=PARAM passando os parametros, para buscar um parceiro nas proximidades, dada lng e lat"
+        "/busca/buscaParceiro/?lng=PARAM&lat=PARAM": "Chame /busca/buscaParceiro/?lng=PARAM&lat=PARAM passando os parametros, para buscar um parceiro nas proximidades, dada lng e lat"
     }
 }
 ```
@@ -331,13 +332,20 @@ obs: Lista tudo que estiver no BANCO.
 ## Instrução para instalar
 ### Windows, linux e MacOS
 #### Primeiro instalar o Visual Studio e o NodeJS
-* [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/)
-* [NodeJS](https://nodejs.org/en/download/)
+* [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/) [SUGESTÃO DE IDE]
+* [NodeJS](https://nodejs.org/en/download/) [SUGESTÃO CASO NÃO QUEIRA INICIAR A APLICAÇÃO PELO DOCKER]
+* [Docker](https://www.docker.com/products/docker-desktop) [SUGESTÃO CASO QUEIRA INICIAR A APLICAÇÃO PELO DOCKER]
+* [Postman](https://www.postman.com/downloads/) [SUGESTÃO DE SOFTWARE PARA CHAMADA DAS API'S]
 ---------------------------------------------------------------------------
 #### Clonar este projeto
-	git clone git@github.com:rhenancocev/ZeDeliveryDesafio.git
+	git clone git@github.com:rhenancocev/DesafioZeDelivery.git
 ---------------------------------------------------------------------------
 #### Rode a aplicação
- - Dentro do diretorio local (dentro da master), executar o comando "node app.js" aguardar subir a aplicação node e o banco.
- Após essas duas mensagens no console: "API Rodando..." e "Banco de dados conectado..." a chamada das API's poderá ser feita via postman.
+ - Dentro do diretorio local (MASTER), executar o comando "docker-compose up" no terminal e aguardar subir a aplicação (node/banco).
+ 
+ - Aguardar receber as seguintes mensagens no console: "API Rodando..." e "Banco de dados conectado..." 
+ 
+ - Utilizar o POSTMAN ou qualquer outro programa para realizar as chamadas das API's.
+ 
+ - Para descer a aplicação, basta executar o comando "docker-compose down -v".
 ---------------------------------------------------------------------------
