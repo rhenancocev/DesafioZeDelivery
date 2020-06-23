@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+    node_api:
+        image: rhenancocev/desafio_ze_delivery:0.1
+        command: node app.js
+        ports: 
+           - 8080:8080
